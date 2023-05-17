@@ -14,6 +14,7 @@ def run(playwright: Playwright) -> None:
     page.get_by_placeholder("Пароль").click()
     page.get_by_placeholder("Пароль").fill("gotit")
     page.locator("#auth-container").get_by_text("Войти").click()
+
     page.frame_locator("iframe[name=\"a-61od1coj0jtj\"]").get_by_role("checkbox", name="Я не робот").click()
 
     expect(page.get_by_role("checkbox", name="Я не робот")).to_be_disabled()
