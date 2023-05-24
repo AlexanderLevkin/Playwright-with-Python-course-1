@@ -272,6 +272,19 @@ files = [
 typing-extensions = "*"
 
 [[package]]
+name = "pysocks"
+version = "1.7.1"
+description = "A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+files = [
+    {file = "PySocks-1.7.1-py27-none-any.whl", hash = "sha256:08e69f092cc6dbe92a0fdd16eeb9b9ffbc13cadfe5ca4c7bd92ffb078b293299"},
+    {file = "PySocks-1.7.1-py3-none-any.whl", hash = "sha256:2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5"},
+    {file = "PySocks-1.7.1.tar.gz", hash = "sha256:3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"},
+]
+
+[[package]]
 name = "pytest"
 version = "7.3.1"
 description = "pytest: simple powerful testing with Python"
@@ -345,6 +358,22 @@ text-unidecode = ">=1.3"
 unidecode = ["Unidecode (>=1.1.1)"]
 
 [[package]]
+name = "recaptchav3"
+version = "1"
+description = "Bypassing reCaptcha V3 by sending HTTP requests & solving reCaptcha V2 using speech to text."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "RecaptchaV3-1-py3-none-any.whl", hash = "sha256:6e098c2524bb5460ca0198885dfe524365eab0b02a93e91425124afbc4f3af5b"},
+    {file = "RecaptchaV3-1.tar.gz", hash = "sha256:5b28b122ee0e552e1abe1f5b6072ddcf565a111bedb3a5105de9f9f754d5b032"},
+]
+
+[package.dependencies]
+PySocks = "1.7.1"
+requests = ">=2.25.1,<3.0"
+
+[[package]]
 name = "requests"
 version = "2.30.0"
 description = "Python HTTP for Humans."
@@ -411,4 +440,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "4158f0ddbe311c25175dd55c978161c2379998a52491818fb4ab5b08e1a692e8"
+content-hash = "44589a2a2b140d0630a94452df489779c213604fd1bd7bb004eb7e35639a7840"
