@@ -27,6 +27,9 @@ def test_playwright_assertion(browser_context_args):
     fill_form.press('Enter')
     fill_form.type('Задача №2')
     fill_form.press('Enter')
-    page.pause()
     todo_item = page.get_by_test_id('todo-item')
     expect(todo_item).to_have_count(2)
+    todo_item.get_by_role('checkbox').nth(0).click()
+    expect(todo_item.nth(0)).to_have_class('completed')
+
+
